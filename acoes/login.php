@@ -11,11 +11,11 @@
             session_start();
             $_SESSION["usuario"] = array($user["usuNome"], $user["usuTipo"]);
 
-            echo "<script>window.location = '../home.php'</script>";
+            echo json_encode(array("erro" => 0));
         }else{
-            echo "<script>window.location = '../index.html'</script>";
+            echo json_encode(array("erro" => 1, "mensagem" => "Email e/ou senha incorretos"));
         }
     }else{
-        echo "<script>window.location = '../index.html'</script>";
+        echo json_encode(array("erro" => 1, "mensagem" => "Ocorreu um erro interno no servidor"));
     }
 ?>
