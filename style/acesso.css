@@ -44,6 +44,11 @@ div#formulario{
     margin-left: -485px;
 }
 
+div#formulario.cadastro{
+    height: 420px;
+    margin-top: -210px;
+}
+
 div#formulario:after{
     content: "";
     position: absolute;
@@ -56,6 +61,10 @@ div#formulario:after{
     z-index: -1;
 }
 
+div#formulario.cadastro:after{
+    height: 360px;
+}
+
 div#formulario form{
     width: 350px;
     height: 290px;
@@ -64,6 +73,11 @@ div#formulario form{
     padding: 30px 50px;
     box-shadow: 0 0 50px rgba(0, 0, 0, .5);
     float: left;
+}
+
+div#formulario form#formularioCadastro{
+    display: none;
+    height: 400px;
 }
 
 div#formulario form span.title{
@@ -116,13 +130,20 @@ div#formulario form div#button button{
     cursor: pointer;
 }
 
-div#formulario div#textoCadastro{
+div#formulario div#textoLogin{
+    display: none;
+
+}
+
+div#formulario div#textoCadastro,
+div#formulario div#textoLogin{
     float: right;
     width: 400px;
     padding-top: 90px;
 }
 
-div#formulario div#textoCadastro span.title{
+div#formulario div#textoCadastro span.title,
+div#formulario div#textoLogin span.title{
     font-family: "Poppins";
     font-size: 20px;
     text-transform: uppercase;
@@ -131,7 +152,8 @@ div#formulario div#textoCadastro span.title{
     letter-spacing: 1px;
 }
 
-div#formulario div#textoCadastro span.subtitle{
+div#formulario div#textoCadastro span.subtitle,
+div#formulario div#textoLogin span.subtitle{
     font-family: "Poppins";
     font-size: 20px;
     display: block;
@@ -139,7 +161,8 @@ div#formulario div#textoCadastro span.subtitle{
     color: #5b5b68;
 }
 
-div#formulario div#textoCadastro button{
+div#formulario div#textoCadastro button,
+div#formulario div#textoLogin button{
     margin-top: 30px;
     font-family: "Poppins";
     font-size: 13px;

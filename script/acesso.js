@@ -6,7 +6,7 @@ $(function(){
         var campousuSenha = $("form#formularioLogin #usuSenha").val();
 
         if(campousuEmail.trim() == "" || campousuSenha.trim() == ""){
-            $("div#mensagem").show().html("Preencha todos os campos");
+            $("div#mensagem").show().removeClass("red").html("Preencha todos os campos");
         }else{
             $.ajax({
                 url: "acoes/login.php",
@@ -20,16 +20,27 @@ $(function(){
                     retorno = JSON.parse(retorno);
     
                     if(retorno["erro"]){
-                        $("div#mensagem").show().html(retorno["mensagem"]);
+                        $("div#mensagem").show().addClass("red").html(retorno["mensagem"]);
                     }else{
                         window.location = "home.php"
                     }
                 },
 
                 error: function(){
-                    $("div#mensagem").show().html("Ocorreu um erro durante a solicitação");
+                    $("div#mensagem").show().addClass("red").html("Ocorreu um erro durante a solicitação");
                 }
             });
         }
     });
+
+    $("button#btnCadastro").on("click", function(){
+        $("div#formulario").addClass("cadastro");
+
+        $("form#formularioLogin").hide();
+        $("form#formularioCadastro").show();
+
+        $("div#textoCadastro").hide();
+        $("div#textoLogin").show();
+    });
 });
+
