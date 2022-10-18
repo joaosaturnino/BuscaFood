@@ -31,24 +31,37 @@
                     <td width="469" bgcolor="#CCFFFF"><strong>CADASTRO DE PRODUTOS</strong></td>
                 </tr>
                 <tr>
-                    <td bgcolor="#CCFFFF"><span class="style1">Descrição</span>: </td>
-                    <td bgcolor="#CCFFFF"><input name="descricao" size=75 value=""></td>
+                    <td bgcolor="#CCFFFF"><span class="style1">Produto</span>: </td>
+                    <td bgcolor="#CCFFFF"><input name="proNome" size=75 value=""></td>
                 </tr>
                 <tr>
-                    <td bgcolor="#CCFFFF"><span class="style1">Preço Unit.:</span></td>
-                    <td bgcolor="#CCFFFF"><input name="precoUnit" size=10 value=""></td>
+                    <td bgcolor="#CCFFFF"><span class="style1">Preço</span>: </td>
+                    <td bgcolor="#CCFFFF"><input name="proPreco" size=10 value=""></td>
+                </tr>
+                <td bgcolor="#CCFFFF"><span class="style1">Tamanho</span>: </td>
+                <td bgcolor="#CCFFFF"><select name="proTamanho" id="tipo-select">
+                                        <option value="" selected hidden disabled>Escolha uma opção</option>
+                                        <option value="inteira">Inteira</option>
+                                        <option value="meia">Meia</option>
+                                        <option value="pequena">Pequena</option>
+                                        <option value="media">Média</option>
+                                        <option value="grande">Grande</option>
+                                    </select></td>
+                </tr>
+                
+                <td bgcolor="#CCFFFF"><span class="style1">Categoria:</span></td>
+                <td bgcolor="#CCFFFF"><select name="cat_Id" id="tipo-select">
+                                        <option value="" selected hidden disabled>Escolha uma opção</option>
+                                        <option value="1">Lanche</option>
+                                        <option value="2">Hot Dog</option>
+                                        <option value="3">Combo</option>
+                                        <option value="4">Porção</option>
+                                        <option value="5">Pizza</option>
+                                    </select></td>
                 </tr>
                 <tr>
-                    <td bgcolor="#CCFFFF"><span class="style1">Promoção:</span></td>
-                    <td bgcolor="#CCFFFF"><input name="promocao" size=10 value=""></td>
-                </tr>
-                <tr>
-                    <td bgcolor="#CCFFFF"><span class="style1">Estoque:</span></td>
-                    <td bgcolor="#CCFFFF"><input name="estoque" size=10 value=""></td>
-                </tr>
-                <tr>
-                    <td height="138" bgcolor="#CCFFFF"><span class="style1">Detalhes:</span></td>
-                    <td bgcolor="#CCFFFF"><textarea name="detalhes" cols="50" rows="8"></textarea></td>
+                    <td height="138" bgcolor="#CCFFFF"><span class="style1">Composição</span>: </td>
+                    <td bgcolor="#CCFFFF"><textarea name="proDescrição" cols="50" rows="8"></textarea></td>
                 </tr>
                 <tr>
                     <td bgcolor="#CCFFFF"><span class="style1">Foto:</span></td>
