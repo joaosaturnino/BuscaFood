@@ -16,18 +16,27 @@
 
     <div id="formulario">
         <form id="formularioLogin">
-            <span class="tittle">Acesse sua conta</span>
+            <span class="title">Acesse sua conta</span>
 
+            <div id="linha">
+                <label for="usuEmail" >Email</label>
+                <input type="text" name="usuEmail" id="usuEmail" />
+            </div>
             
-            <input type="text" name="usuEmail" id="usuEmail" />
-            <input type="password" name="usuSenha" id="usuSenha" />
+            <div id="linha">
+                <label for="usuSenha">Senha</label>
+                <input type="password" name="usuSenha" id="usuSenha" />
+            </div>
             
-            <button id="btnEntrar">Entrar</button>
+            <div id="button">
+                <button id="btnEntrar">Entrar</button>
+            </div>
+            
         </form>
 
         <div id="textoCadastro">
-            <span class="tittle">Não possui uma conta?</span>
-            <span class="subtittle">Crie uma conta agora</span>
+            <span class="title">Não possui uma conta?</span>
+            <span class="subtitle">Crie uma conta agora</span>
             <button id="btnCadastro">Cadastrar</button>
         </div>
     </div>

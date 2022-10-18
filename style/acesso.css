@@ -30,6 +30,32 @@ div#mensagem{
     display: none;
 }
 
+div#mensagem.red{
+    background: red;
+}
+
+div#formulario{
+    width: 970px;
+    height: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -485px;
+}
+
+div#formulario:after{
+    content: "";
+    position: absolute;
+    width: 1070px;
+    height: 250px;
+    top: 50px;
+    left: -50px;
+    background: #cfcfd3;
+    border-radius: 5px;
+    z-index: -1;
+}
+
 div#formulario form{
     width: 350px;
     height: 290px;
@@ -37,4 +63,92 @@ div#formulario form{
     border-radius: 5px;
     padding: 30px 50px;
     box-shadow: 0 0 50px rgba(0, 0, 0, .5);
+    float: left;
+}
+
+div#formulario form span.title{
+    font-family: "Poppins";
+    font-size: 24px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #5b5b68;
+    letter-spacing: 1px;
+}
+
+div#formulario form div#linha{
+    margin-bottom: 10px;
+}
+
+div#formulario form div#linha label{
+    font-family: "Poppins";
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+div#formulario form div#linha input{
+    background: #dad8d8;
+    border: 2px solid #eee;
+    border-radius: 2px;
+    height: 11px;
+    padding: 10px  6px;
+    width: calc(100% - 16px);
+}
+
+div#formulario form div#button{
+    text-align: center;
+}
+
+div#formulario form div#button button{
+    margin-top: 30px;
+    font-family: "Poppins";
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 14px 40px;
+    background: #d29f4e;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+div#formulario div#textoCadastro{
+    float: right;
+    width: 400px;
+    padding-top: 90px;
+}
+
+div#formulario div#textoCadastro span.title{
+    font-family: "Poppins";
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block;
+    color: #5b5b68;
+    letter-spacing: 1px;
+}
+
+div#formulario div#textoCadastro span.subtitle{
+    font-family: "Poppins";
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+    color: #5b5b68;
+}
+
+div#formulario div#textoCadastro button{
+    margin-top: 30px;
+    font-family: "Poppins";
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 14px 40px;
+    background: #d29f4e;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
 }

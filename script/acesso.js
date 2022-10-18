@@ -6,7 +6,7 @@ $(function(){
         var campousuSenha = $("form#formularioLogin #usuSenha").val();
 
         if(campousuEmail.trim() == "" || campousuSenha.trim() == ""){
-            $("div#mensagem").html("Preencha todos os campos");
+            $("div#mensagem").show().html("Preencha todos os campos");
         }else{
             $.ajax({
                 url: "acoes/login.php",
@@ -20,14 +20,14 @@ $(function(){
                     retorno = JSON.parse(retorno);
     
                     if(retorno["erro"]){
-                        $("div#mensagem").html(retorno["mensagem"]);
+                        $("div#mensagem").show().html(retorno["mensagem"]);
                     }else{
                         window.location = "home.php"
                     }
                 },
 
                 error: function(){
-                    $("div#mensagem").html("Ocorreu um erro durante a solicitação");
+                    $("div#mensagem").show().html("Ocorreu um erro durante a solicitação");
                 }
             });
         }
