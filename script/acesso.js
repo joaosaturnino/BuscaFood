@@ -42,5 +42,15 @@ $(function(){
         $("div#textoCadastro").hide();
         $("div#textoLogin").show();
     });
+
+    $("button#btnLogin").on("click", function(){
+        $("div#formulario").removeClass("cadastro");
+
+        $("form#formularioCadastro").hide();
+        $("form#formularioLogin").show();
+
+        $("div#textoLogin").hide();
+        $("div#textoCadastro").show();
+    });
 });
 
