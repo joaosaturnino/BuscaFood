@@ -2,7 +2,7 @@
     session_start();
 
     if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
-        require("acoes/conexao.php");
+        require("conexao.php");
         
         $usuTipo = $_SESSION["usuario"][1];
         $usuNome = $_SESSION["usuario"][0];
@@ -21,9 +21,9 @@
 						"VALUES('".$proNome."',".$proPreco.",".$proTamanho.",".$cat_Id.",'".$proDescricao."','D')";
 		
 				
-				$consulta = mysqli_query($conn,$sql);
+				$consulta = mysqli_query($conexao,$sql);
 		
-				$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
+				$codprod = mysqli_insert_id($conexao); //pega o campo chave da tabela (vai ser usado em upload)
 				
 				include("./acoes/upload.php"); //neste ponto chama o arquivo para fazer o upload da foto
 				
