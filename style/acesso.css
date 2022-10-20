@@ -42,11 +42,13 @@ div#formulario{
     left: 50%;
     margin-top: -175px;
     margin-left: -485px;
+    
 }
 
 div#formulario.cadastro{
     height: 420px;
     margin-top: -210px;
+    
 }
 
 div#formulario:after{
@@ -78,6 +80,7 @@ div#formulario form{
 div#formulario form#formularioCadastro{
     display: none;
     height: 400px;
+    overflow-y: scroll;
 }
 
 div#formulario form span.title{
@@ -97,7 +100,7 @@ div#formulario form div#linha{
 
 div#formulario form div#linha label{
     font-family: "Poppins";
-    font-size: 10px;
+    font-size: 20px;
     display: block;
     margin-bottom: 5px;
     color: black;

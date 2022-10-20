@@ -4,8 +4,10 @@
     if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
         require("acoes/conexao.php");
         
-        $usuTipo = $_SESSION["usuario"][1];
-        $usuNome = $_SESSION["usuario"][0];
+        // $usuTipo = $_SESSION["usuario"][1];
+        // $usuNome = $_SESSION["usuario"][0];
+
+        $estNome = $_SESSION["usuario"][1];
     }else{
         echo "<script>window.location = 'index.html'</script>";
     }
